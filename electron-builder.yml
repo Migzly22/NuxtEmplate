@@ -1,0 +1,89 @@
+appId: com.nuxtemplate.app
+productName: nuxtemplate
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!app/*'
+  - '!node_modules/*'
+  - '!plugins/*'
+  - '!public/*'
+  - '!server/*'
+  - '!store/**/*'
+  - '!shared/**/*'
+  - '!{runtime.config.ts}'
+  - '!electron/**/*'
+  - '!logs/**/*'
+  - '!data_copy.db'
+  - '!.nuxt/**/*'
+  - '!electron/**/*'
+
+  - '!runtime.config.ts'
+  - '!nuxt.config.ts'
+  - '!eslint.config.ts'
+  - '!build.sh'
+
+  - "!node_modules/unimport/**"
+  - "!node_modules/escape-string-regexp/**"
+asarUnpack:
+  - data.db
+  - env-file
+  - node_modules/node-zklib/** 
+extraResources:
+  - logs/**/*
+  - from: build/icon.ico
+    to: icon.ico
+win:
+  target: 
+    - nsis
+  requestedExecutionLevel: requireAdministrator
+  icon: build/icon.ico
+  executableName: nuxtemplate
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  installerIcon: build/icon.ico     
+  uninstallerIcon: build/icon.ico
+  createStartMenuShortcut: true
+  perMachine: true
+  allowElevation: true
+  oneClick: false 
+  deleteAppDataOnUninstall : true
+  allowToChangeInstallationDirectory: true
+mac:
+  icon: build/icons.icns
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSLocalNetworkUsageDescription: "This app needs access to the local network to communicate with biometric devices."
+    - NSBonjourServices:
+      - _http._tcp
+      - _https._tcp
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://example.com/auto-updates
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

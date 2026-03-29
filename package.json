@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "author": "Rolly Migriño",
+  "version": "v0.0.1",
+  "main": "dist-electron/main.js",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "build:mac": "bun run build && electron-builder --mac",
+    "build:win": "bun run build && electron-builder --win"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "1.15.2",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "4.6.0",
+    "electron": "^41.1.0",
+    "electron-builder": "^26.8.1",
+    "eslint": "^9.0.0 || ^10.0.0",
+    "nuxt": "^4.4.2",
+    "nuxt-electron": "^0.7.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.3",
+    "vite-plugin-electron": "^0.29.1",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.4"
+  }
+}

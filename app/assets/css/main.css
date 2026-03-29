@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+    --color-fire-brick-50: #FF5F5F;
+  --color-fire-brick-100: #FF5151;
+  --color-fire-brick-200: #FF4444;
+  --color-fire-brick-300: #FF3636;
+  --color-fire-brick-400: #D52828;
+  --color-fire-brick-500: #B22222;
+  --color-fire-brick-600: #8E1B1B;
+  --color-fire-brick-700: #6A1414;
+  --color-fire-brick-800: #470D0D;
+  --color-fire-brick-900: #230606;
+  --color-fire-brick-950: #110303;
+
+  /* Red (This will OVERRIDE the default 'red' scale) */
+  --color-red-50: #F9E4E4;
+  --color-red-100: #F4C2C2;
+  --color-red-200: #E78888;
+  --color-red-300: #DB4E4E;
+  --color-red-400: #C63C3C;
+  --color-red-500: #952528;
+  --color-red-600: #842021;
+  --color-red-700: #6E1919;
+  --color-red-800: #571313;
+  --color-red-900: #410D0D;
+  --color-red-950: #2A0606;
+
+  /* Blue (This will OVERRIDE the default 'blue' scale) */
+  --color-blue-50: #E2F4FC;
+  --color-blue-100: #B8E3F8;
+  --color-blue-200: #8FD2F3;
+  --color-blue-300: #66C0EE;
+  --color-blue-400: #3CAFEB;
+  --color-blue-500: #0093DD;
+  --color-blue-600: #0084C7;
+  --color-blue-700: #0070A7;
+  --color-blue-800: #005C86;
+  --color-blue-900: #004665;
+  --color-blue-950: #002234;
+  
+  /* Dark Blue */
+  --color-dark-blue-50: #E6E8F2;
+  --color-dark-blue-100: #C2C7E1;
+  --color-dark-blue-200: #9DA5D0;
+  --color-dark-blue-300: #7984BF;
+  --color-dark-blue-400: #5563AE;
+  --color-dark-blue-500: #172554;
+  --color-dark-blue-600: #141F48;
+  --color-dark-blue-700: #10183A;
+  --color-dark-blue-800: #0C122C;
+  --color-dark-blue-900: #080B1E;
+  --color-dark-blue-950: #04060F;
+
+  /* Green (This will OVERRIDE the default 'green' scale) */
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052e16;
+}
